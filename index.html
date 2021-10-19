@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    "
+  >
+    <div class="card p-5" style="margin-top: 10%">
+      <div class="row mt-5 mb-5">
+        <!-- This div is for Sign In section -->
+        <div class="card col-lg my-auto m-5 col-md-6" id="signIn">
+          <h3 style="text-align: center; font-weight: 300; line-height: 1.2">
+            Sign in
+          </h3>
+          <input
+            id="emaVal"
+            class="m-2 form-control"
+            placeholder="Email"
+            onchange="change('emaVal')"
+            type="email"
+          />
+          <div id="emaValMsg" style="color: red;"></div>
+          <input
+            id="passVal"
+            class="m-2 form-control"
+            placeholder="Password"
+            onchange="change('passVal')"
+            maxlength="6"
+            type="password"
+          />
+          <div id="passValMsg" style="color: red;"></div>
+          <div style="display: flex; justify-content: center; margin-top: 5%">
+            <button class="m-2 btn btn-primary" onclick="dis()" id="btn-in">Sign In</button>
+          </div>
+        </div>
+        <!-- This div is for Sign Up section -->
+        <div
+          class="card col-lg my-auto m-5 col-md-6"
+          id="signUp"
+          style="background-color: skyblue"
+        >
+          <h3 class="m-2" style="text-align: center">Hello Friend!</h3>
+          <p class="m-2" style="text-align: center">
+            Enter your personal details and start journey with us
+          </p>
+          <div style="display: flex; justify-content: center; margin-top: 5%">
+            <button class="m-2 btn btn-primary" onclick="display()" id="btn-up">
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
